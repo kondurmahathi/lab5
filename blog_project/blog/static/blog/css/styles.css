@@ -1,0 +1,137 @@
+/* blog/static/blog/css/styles.css */
+/* Add your non-responsive styles here */
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 767px) {
+    /* Add styles for small screens here */
+}
+
+/* Responsive styles for screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Add styles for medium screens here */
+}
+
+/* Responsive styles for screens 992px and larger */
+@media (min-width: 992px) {
+    /* Add styles for large screens here */
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #e6e6e6; /* Updated background color */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh; /* Ensure full height */
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #db7474;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  nav {
+    margin-top: 20px;
+  }
+  
+  nav a {
+    color: #777; /* Updated link color */
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #333; /* Updated link hover color */
+  }
+  
+  main {
+    margin-top: 20px;
+  }
+  
+  .post {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .post h2 {
+    color: #333;
+  }
+  
+  .post p {
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    header h1 {
+      font-size: 1.5em;
+    }
+  
+    nav a {
+      font-size: 1em;
+      margin-right: 10px;
+    }
+  
+    main {
+      margin-top: 10px;
+    }
+  }
+
+  .logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff; /* Choose the color you prefer */
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .logout:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Blog Posts</h2>
+  <form method="get">
+    <input type="text" name="q" placeholder="Search...">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    {% for post in object_list %}
+      <li><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'post_create' %}">Create New Post</a>
+{% endblock %}

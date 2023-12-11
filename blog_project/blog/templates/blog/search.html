@@ -1,0 +1,26 @@
+<!-- blog/templates/blog/search.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Search Results</h2>
+<p>Number of results: {{ results|length }}</p>
+
+  <!-- Include this form in your HTML template, where users input their search query -->
+  <form method="get" action="{% url 'search' %}">
+    <input type="text" name="q" placeholder="Search...">
+    <input type="submit" value="Search">
+  </form>
+
+  {% if results %}
+    <ul>
+      {% for post in results %}
+        <li>
+          <h3><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h3>
+          <p>{{ post.content }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %}
+{% endblock %}

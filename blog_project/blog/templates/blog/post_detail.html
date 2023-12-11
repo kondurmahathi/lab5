@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.content }}</p>
+  <p>
+    <!-- <p>Average Rating: {{ average_rating|default:"No ratings yet" }}</p> -->
+    Share this post:
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener noreferrer">Facebook</a>
+    |
+    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank" rel="noopener noreferrer">Twitter</a>
+  </p>
+
+  <a href="{% url 'post_update' pk=object.pk %}">Update</a>
+  <a href="{% url 'post_delete' pk=object.pk %}">Delete</a>
+{% endblock %}

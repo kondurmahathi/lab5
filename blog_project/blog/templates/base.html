@@ -1,0 +1,28 @@
+<!-- blog/templates/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <!-- Add this line to include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-Z1l5yz8XweU6Sbg1Hhtq63uSgtNnE8sV5oJBRJQgZETK8tR8ZDY6Fd8co+Owh+VOvyJ+NhEa3eVewJEdgfy7aA==" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'post_list' %}">Mahathi's Blog App</a></h1>
+        {% if user.is_authenticated %}
+            <p>Hello, {{ user.username }}!</p>
+            <a href="{% url 'logout' %}" class="logout">Logout</a>
+        {% else %}
+            <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'register' %}">Register</a></p>
+        {% endif %}
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

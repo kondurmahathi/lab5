@@ -1,0 +1,29 @@
+/* blog/static/blog/css/styles.css */
+/* Add your non-responsive styles here */
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 767px) {
+    /* Add styles for small screens here */
+}
+
+/* Responsive styles for screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Add styles for medium screens here */
+}
+
+/* Responsive styles for screens 992px and larger */
+@media (min-width: 992px) {
+    /* Add styles for large screens here */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #0066cc;
+}
